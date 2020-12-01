@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FifthActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4">
+
+        <TextView
+            android:id="@+id/tv_user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/luck_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Try Your Luck!!"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/draw_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Choose Lucky Winner!!"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_room_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-MMgytGJUharIJd"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/lucky_room_id_label"
+        app:layout_constraintTop_toTopOf="@+id/lucky_room_id_label" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Bill Giveaway"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/lucky_room_status_label"
+        app:layout_constraintTop_toTopOf="@+id/lucky_room_status_label" />
+
+    <TextView
+        android:id="@+id/tv_creator_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zin"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/creator_label"
+        app:layout_constraintTop_toTopOf="@+id/creator_label" />
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/luck_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/luck_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lucky_room_status_label"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/lucky_user_list" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/winner_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/luck_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lucky_room_status_label"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/winner_list"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/lucky_room_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Room ID : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+
+    <TextView
+        android:id="@+id/lucky_room_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Status : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/lucky_room_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/lucky_room_id_label" />
+
+    <TextView
+        android:id="@+id/creator_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Room Creator : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Slot : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/creator_label"
+        app:layout_constraintTop_toBottomOf="@+id/creator_label" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Winner : "
+        android:textColor="@color/black"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tv_last_creator_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Linn Aung"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tv_creator_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_creator_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
